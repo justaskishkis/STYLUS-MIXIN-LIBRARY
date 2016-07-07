@@ -1,820 +1,110 @@
-//  Global variables
-mixin-library-vendors = webkit moz ms o
-
-//  TODO GLOBAL: directional-property not to repeat property-top property-right property-bottom property-left
-//  TODO GLOBAL: make all usages the same with (), tip: use args[0]
-
-//  Internal mixins
-vendor(prop, args)
-	for vendor in mixin-library-vendors
-		-{vendor}-{prop} args
-	{prop} args
-
-//  Animations
-//  Animation
-//--Keyword values--
-//  @keyframes duration | timing-function | delay | iteration-count | direction | fill-mode | play-state | name
-//  @keyframes duration | timing-function | delay | name
-//  @keyframes duration | name
-//--Usage:
-//  .someClass
-//      animation 3s ease-in 1s 2 reverse both paused slidein
-animation()
-	if current-property {
-		vendor('animation', arguments)
-	} else {
-		error('animation() must be used within a property')
-	}
-
-//  Animation name
-//--Keyword values--
-//  name | inherited | initial | unset
-//--Multiple animations--
-//  name1, name2
-//--Usage:
-//  .someClass
-//      animation-name inherited
-animation-name()
-	if current-property {
-		vendor('animation-name', arguments)
-	} else {
-		error('animation-name() must be used within a property')
-	}
-
-//  Animation duration
-//--Keyword values--
-//  1s / 200ms
-//--Multiple animations--
-//  1s, 200ms
-//--Usage:
-//  .someClass
-//      animation-duration 200ms
-animation-duration()
-	if current-property {
-		vendor('animation-duration', arguments)
-	} else {
-		error('animation-duration() must be used within a property')
-	}
-
-//  Animation timing function
-//--Keyword values--
-//  ease | linear | ease-in | ease-out | ease-in-out | step-start | step-end | inherited | initial | unset
-//--Function values--
-//  cubic-bezier(0.1, 0.7, 1.0, 0.1) | steps(4, end)
-//--Multiple animations--
-//  ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1)
-//--Usage:
-//  .someClass
-//      animation-timing-function ease
-animation-timing-function()
-	if current-property {
-		vendor('animation-timing-function', arguments)
-	} else {
-		error('animation-timing-function() must be used within a property')
-	}
-
-//  Animation delay
-//--Keyword values--
-//  1s / 200ms
-//--Multiple animations--
-//  1s, 200ms
-//--Usage:
-//  .someClass
-//      animation-delay(1s)
-animation-delay()
-	if current-property {
-		vendor('animation-delay', arguments)
-	} else {
-		error('animation-delay() must be used within a property')
-	}
-
-//  Animation iteration count
-//--Keyword values--
-//  infinite | 1
-//--Multiple animations--
-//  1, infinite, 2.3
-//--Usage:
-//  .someClass
-//      animation-iteration-count infinite
-animation-iteration-count()
-	if current-property {
-		vendor('animation-iteration-count', arguments)
-	} else {
-		error('animation-iteration-count() must be used within a property')
-	}
-
-//  Animation direction
-//--Keyword values--
-//  normal | reverse | alternate | alternate-reverse | inherited | initial | unset
-//--Multiple animations--
-//  normal, reverse | alternate, reverse, normal
-//--Usage:
-//  .someClass
-//      animation-direction reverse
-animation-direction()
-	if current-property {
-		vendor('animation-direction', arguments)
-	} else {
-		error('animation-direction() must be used within a property')
-	}
-
-//  Animation fill mode
-//--Keyword values--
-//  none | forwards | backwards | both
-//--Multiple animations--
-//  none, forwards
-//--Usage:
-//  .someClass
-//      animation-fill-mode none
-animation-fill-mode()
-	if current-property {
-		vendor('animation-fill-mode', arguments)
-	} else {
-		error('animation-fill-mode() must be used within a property')
-	}
-
-//  Animation play state
-//--Keyword values--
-//  running | paused | inherited | initial | unset
-//--Multiple animations--
-//  running, paused
-//--Usage:
-//  .someClass
-//      animation-play-state running
-animation-play-state()
-	if current-property {
-		vendor('animation-play-state', arguments)
-	} else {
-		error('animation-play-state() must be used within a property')
-	}
-
-//  Appearance
-//--Keyword values--
-//  none | button | .. a huge list of appearances
-//--Usage:
-//  .someClass
-//      appearance none
-appearance()
-	if current-property {
-		vendor('appearance', arguments)
-	} else {
-		error('appearance() must be used within a property')
-	}
-
-//  Backface visibilty
-//--Keyword values--
-//  visible | hidden
-//--Usage:
-//  .someClass
-//      backface-visibility visible
-backface-visibility()
-	if current-property {
-		vendor('backface-visibility', arguments)
-	} else {
-		error('backface-visibility() must be used within a property')
-	}
-
-//  Background TODO: implement this later
-
-//  Background-image TODO: implement this later
-
-//  Border-image TODO: implement this later
-
-//  Box shadow
-//--Keyword values--
-//  inset(optional) | offset-x | offset-y | blur-radius | spread-radius | color
-//--Usage:
-//  .someClass
-//      box-shadow inset 2px 2px 2px 1px rgba(0, 0, 0, 0.2)
-box-shadow()
-	if current-property {
-		vendor('box-shadow', arguments)
-	} else {
-		error('box-shadow() must be used within a property')
-	}
-
-//  Box sizing
-//--Keyword values--
-//  content-box | border-box | inherit | inherit | unset
-//--Usage:
-//  .someClass
-//      box-sizing border-box
-box-sizing()
-	if current-property {
-		vendor('box-sizing', arguments)
-	} else {
-		error('box-sizing() must be used within a property')
-	}
-
-//  Calc TODO: test it
-//calc()
-//--Usage:
-//  width calc('30% - 10px')
-//--Usage with variables:
-//  width calc(variableName1 + ' - %s' % (variableName2)), NOTE: variable1 must be a string
-//if current-property {
-//    arguments = unquote(arguments)
-//    for prefix in mixin-library-vendors {
-//        add-property(current-property[0], s('-%s-calc(%s)', prefix, arguments))
-//    }
-//    s('calc(%s)', arguments)
-//} else {
-//    error('calc() must be used within a property')
-//}
-
-//  Columns
-//--Keyword values--
-//  auto | column-width   column-count | initial | inherit
-//--Usage:
-//  .someClass
-//      columns(auto)
-columns()
-	if current-property {
-		vendor('columns', arguments)
-	} else {
-		error('columns() must be used within a property')
-	}
-
-//  Column width
-//--Keyword values--
-//  auto | column-width
-//--Usage:
-//  .someClass
-//      column-width auto
-column-width()
-	if current-property {
-		vendor('column-width', arguments)
-	} else {
-		error('column-width() must be used within a property')
-	}
-
-//  Column count
-//--Keyword values--
-//  column-count | initial | inherit
-//--Usage:
-//  .someClass
-//      column-count 3
-column-count()
-	if current-property {
-		vendor('column-count', arguments)
-	} else {
-		error('column-count() must be used within a property')
-	}
-
-//  Column fill
-//--Keyword values--
-//  balance | auto | initial | inherit
-//--Usage:
-//  .someClass
-//      column-fill balance
-column-fill()
-	if current-property {
-		vendor('column-fill', arguments)
-	} else {
-		error('column-fill() must be used within a property')
-	}
-
-//  Column gap
-//--Keyword values--
-//  column-gap | normal | initial | inherit
-//--Usage:
-//  .someClass
-//      column-gap normal
-column-gap()
-	if current-property {
-		vendor('column-gap', arguments)
-	} else {
-		error('column-gap() must be used within a property')
-	}
-
-//  Column rule width
-//--Keyword values--
-//  column-rule-width   column-rule-style   column-rule-color | initial | inherit
-//--Usage:
-//  .someClass
-//      column-rule initial
-column-rule()
-	if current-property {
-		vendor('column-rule', arguments)
-	} else {
-		error('column-rule() must be used within a property')
-	}
-
-//  Column rule color
-//--Keyword values--
-//  color | initial | inherit
-//--Usage:
-//  .someClass
-//      column-rule-color initial
-column-rule-color()
-	if current-property {
-		vendor('column-rule-color', arguments)
-	} else {
-		error('column-rule-color() must be used within a property')
-	}
-
-//  Column rule style
-//--Keyword values--
-//  none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset | initial | inherit
-//--Usage:
-//  .someClass
-//      column-rule-style hidden
-column-rule-style()
-	if current-property {
-		vendor('column-rule-style', arguments)
-	} else {
-		error('column-rule-style() must be used within a property')
-	}
-
-//  Column rule width
-//--Keyword values--
-//  medium | thin | thick | length | initial | inherit
-//--Usage:
-//  .someClass
-//      column-rule-width thin
-column-rule-width()
-	if current-property {
-		vendor('column-rule-width', arguments)
-	} else {
-		error('column-rule-width() must be used within a property')
-	}
-
-//  Column span
-//--Keyword values--
-//  1 | all | initial | inherit
-//--Usage:
-//  .someClass
-//      column-span 2
-column-span()
-	if current-property {
-		vendor('column-span', arguments)
-	} else {
-		error('column-span() must be used within a property')
-	}
-
-//  Filter
-//--Keyword values--
-//  none | blur() | brightness() | contrast() | drop-shadow() |
-//  grayscale() | hue-rotate() | invert() | opacity() | saturate() | sepia() | url()
-//--Usage:
-//  .someClass
-//      filter none
-filter()
-	if current-property {
-		vendor('filter', arguments)
-	} else {
-		error('filter() must be used within a property')
-	}
-
-//  Flexbox TODO: implement this later
-
-//  Font face
-//--Usage:
-//  font-face('asSvgFont', 'asSvgFont', font-weight(optional), font-style(optional))
-//--Usage with variables:
-//  font-face('asSvgFont', fonts + 'asSvgFont')
-font-face(
-	fontFamily,
-	fontFilePath,
-	fontWeight = normal,
-	fontStyle = normal
-)
-	@font-face
-		font-family fontFamily
-		src: url(fontFilePath + fontFamily + '.eot');
-		src: url(fontFilePath + fontFamily + '.eot?#iefix') format('embedded-opentype'),
-		url(fontFilePath + fontFamily + '.woff') format('woff'),
-		url(fontFilePath + fontFamily + '.ttf') format('truetype'),
-		url(fontFilePath + fontFamily + '.svg#' + fontFamily) format('svg');
-		font-weight fontWeight
-		font-style fontStyle
-
-//  Font feature settings TODO: implement this later
-
-//  HiDPI media query TODO: implement this later
-
-//  Hyphens TODO: implement this later
-
-//  Image rendering TODO: implement this later
-
-//  Linear gradient TODO: implement this later
-
-//  Perspective TODO: implement this later
-
-//  Placeholder
-//--Usage:
-//  .className
-//      input
-//          placeholder someFontColor
-placeholder(fontColor)
-	&::-webkit-input-placeholder
-		color fontColor
-	&:-moz-placeholder
-		color fontColor
-	&::-moz-placeholder
-		color fontColor
-	&:-ms-input-placeholder
-		color fontColor
-
-//  Radial gradient TODO: implement this later
-
-//  Selection
-//--Usage:
-//  .className
-//      +selection()
-//          background-color #ffbb52
-selection()
-	::-moz-selection
-		{block}
-	::selection
-		{block}
-
-//  Text decoration TODO: implement this later
-
-//  Text decoration line TODO: implement this later
-
-//  Text decoration style TODO: implement this later
-
-//  Text decoration color TODO: implement this later
-
-//  Transform TODO: implement this later
-transform()
-	if current-property {
-		vendor('transform', arguments)
-	} else {
-		error('transform() must be used within a property')
-	}
-
-//  Transitions TODO: implement this later
-
-//  User select
-//--Keyword values--
-//  none | text | all | element(only MS)
-//--Usage:
-//  .someClass
-//      user-select initial
-user-select()
-	if current-property {
-		vendor('user-select', arguments)
-	} else {
-		error('user-select() must be used within a property')
-	}
-
-//  FUNCTIONS TODO:  implement this later
-
-//  Border color TODO:  implement this later
-
-//  Border radius TODO:  implement this later
-border-radius()
-	if current-property {
-		vendor('border-radius', arguments)
-	} else {
-		error('border-radius() must be used within a property')
-	}
-
-//  Border style TODO:  implement this later
-
-//  Border width TODO:  implement this later
-
-//  Buttons (Variable) TODO: implement this later to remove duplicated code like
-//  TODO:  input[type="button"] input[type="reset"] input[type="submit"]
-//--Usage:
-//  +all-buttons()
-//      border 1px solid black
-all-buttons()
-	button
-	input[type="button"]
-	input[type="reset"]
-	input[type="submit"]
-		{block}
-
-//  All buttons focus
-//--Usage:
-//  +all-buttons-focus()
-//      border 1px solid black
-all-buttons-focus()
-	button:focus
-	input[type="button"]:focus
-	input[type="reset"]:focus
-	input[type="submit"]:focus
-		{block}
-
-//  All buttons hover
-//--Usage:
-//  +all-buttons-hover()
-//      border 1px solid black
-all-buttons-hover()
-	button:hover
-	input[type="button"]:hover
-	input[type="reset"]:hover
-	input[type="submit"]:hover
-		{block}
-
-//  All buttons active
-//--Usage:
-//  +all-buttons-active(),
-//  +all-buttons-hover()
-//      border 1px solid black
-all-buttons-active()
-	button:active
-	input[type="button"]:active
-	input[type="reset"]:active
-	input[type="submit"]:active
-		{block}
-
-//  Clearfix
-//--Usage:
-//  .class
-//      clearfix()
-clearfix()
-	&::after
-		clear both
-		content ""
-		display table
-
-//  Directional property TODO: inplement this later
-
-//  Ellipsis  TODO: implement this into bourbone
-//--Usage:
-//  .class
-//      ellipsis 50%, block
-ellipsis(
-	elementWidth = 100%,
-	elementDisplay = inline-block
-)
-	max-width elementWidth
-	display elementDisplay
-	overflow hidden
-	text-overflow ellipsis
-	white-space nowrap
-	word-wrap normal
-
-//  Font stacks TODO: implement this later
-
-//  Hide text
-//--Usage:
-//  .class
-//      hide-text()
-hide-text()
-	text-indent 101%
-	overflow hidden
-	white-space nowrap
-
-//  Padding
-//--Usage:
-//  .class
-//      padding(null null 20px null)
-//  OR
-//      padding(0 10px)
-//  OR
-//      padding(5px 0 2px)
-padding(args)
-	if length(args) == 1
-		if args[0] != null
-			padding-top args[0]
-			padding-right args[0]
-			padding-bottom args[0]
-			padding-left args[0]
-		else if length(args) == 2
-			if args[0] != null
-				padding-top args[0]
-			if args[1] != null
-				padding-right args[1]
-			if args[0] != null
-				padding-bottom args[0]
-			if args[1] != null
-				padding-left args[1]
-		else if length(args) == 3
-			if args[0] != null
-				padding-top args[0]
-			if args[1] != null
-				padding-right args[1]
-			if args[2] != null
-				padding-bottom args[2]
-			if args[1] != null
-				padding-left args[1]
-		else if length(args) == 4
-			if args[0] != null
-				padding-top args[0]
-			if args[1] != null
-				padding-right args[1]
-			if args[2] != null
-				padding-bottom args[2]
-			if args[3] != null
-				padding-left args[3]
-
-//  Margin
-//--Usage:
-//  .class
-//      margin(null null 20px null)
-//  OR
-//      margin(0 10px)
-//  OR
-//      margin(5px 0 2px)
-margin(args)
-	if length(args) == 1
-		if args[0] != null
-			margin-top args[0]
-			margin-right args[0]
-			margin-bottom args[0]
-			margin-left args[0]
-		else if length(args) == 2
-			if args[0] != null
-				margin-top args[0]
-			if args[1] != null
-				margin-right args[1]
-			if args[0] != null
-				margin-bottom args[0]
-			if args[1] != null
-				margin-left args[1]
-		else if length(args) == 3
-			if args[0] != null
-				margin-top args[0]
-			if args[1] != null
-				margin-right args[1]
-			if args[2] != null
-				margin-bottom args[2]
-			if args[1] != null
-				margin-left args[1]
-		else if length(args) == 4
-			if args[0] != null
-				margin-top args[0]
-			if args[1] != null
-				margin-right args[1]
-			if args[2] != null
-				margin-bottom args[2]
-			if args[3] != null
-				margin-left args[3]
-
-//  Position
-//--Usage:
-//  .class
-//      position relative, null, 20px, null, 0
-position(
-	positionType = null,
-	positionTop = null,
-	positionRight = null,
-	positionBottom = null,
-	positionLeft = null
-)
-	if positionType != null
-		position positionType
-	if positionTop != null
-		top positionTop
-	if positionRight != null
-		right positionRight
-	if positionBottom != null
-		bottom positionBottom
-	if positionLeft != null
-		left positionLeft
-
-//  Prefixer TODO: implement this later
-
-//  Retina image
-
-//  Size
-//--Usage:
-//  .class
-//      size 20px null
-//  TODO: implement 1 param version
-size(
-	elementWidth = null,
-	elementHeight = null
-)
-	if elementWidth != null
-		width elementWidth
-	if elementHeight != null
-		height elementHeight
-
-//  All text inputs  TODO: implement as variable like with buttons
-//--Usage:
-//  +all-text-inputs()
-//      border 1px solid black
-all-text-inputs()
-	input[type="color"]
-	input[type="date"]
-	input[type="datetime"]
-	input[type="datetime-local"]
-	input[type="email"]
-	input[type="month"]
-	input[type="number"]
-	input[type="password"]
-	input[type="search"]
-	input[type="tel"]
-	input[type="text"]
-	input[type="time"]
-	input[type="url"]
-	input[type="week"]
-	textarea
-		{block}
-
-//  All text inputs focus
-//--Usage:
-//  +all-text-inputs-focus()
-//      border 1px solid black
-all-text-inputs-focus()
-	input[type="color"]:focus
-	input[type="date"]:focus
-	input[type="datetime"]:focus
-	input[type="datetime-local"]:focus
-	input[type="email"]:focus
-	input[type="month"]:focus
-	input[type="number"]:focus
-	input[type="password"]:focus
-	input[type="search"]:focus
-	input[type="tel"]:focus
-	input[type="text"]:focus
-	input[type="time"]:focus
-	input[type="url"]:focus
-	input[type="week"]:focus
-	textarea:focus
-		{block}
-
-//  All text inputs hover
-//--Usage:
-//  +all-text-inputs-hover()
-//      border 1px solid black
-all-text-inputs-hover()
-	input[type="color"]:hover
-	input[type="date"]:hover
-	input[type="datetime"]:hover
-	input[type="datetime-local"]:hover
-	input[type="email"]:hover
-	input[type="month"]:hover
-	input[type="number"]:hover
-	input[type="password"]:hover
-	input[type="search"]:hover
-	input[type="tel"]:hover
-	input[type="text"]:hover
-	input[type="time"]:hover
-	input[type="url"]:hover
-	input[type="week"]:hover
-	textarea:hover
-		{block}
-
-//  All text inputs active
-//--Usage:
-//  +all-text-inputs-active()
-//      border 1px solid black
-all-text-inputs-active()
-	input[type="color"]:active
-	input[type="date"]:active
-	input[type="datetime"]:active
-	input[type="datetime-local"]:active
-	input[type="email"]:active
-	input[type="month"]:active
-	input[type="number"]:active
-	input[type="password"]:active
-	input[type="search"]:active
-	input[type="tel"]:active
-	input[type="text"]:active
-	input[type="time"]:active
-	input[type="url"]:active
-	input[type="week"]:active
-	textarea:active
-		{block}
-
-//  Timing functions TODO: implement this later
-
-//  Triangle TODO: implement this later
-
-//  Word wrap TODO: implement this later
-
-//  Opacity
-//--Keyword values--
-//  number | unset | initial | inherit
-//--Usage:
-//  ul.someClass
-//      opacity 0.5
-opacity()
-	if current-property {
-		vendor('opacity', arguments)
-	} else {
-		error('opacity() must be used within a property')
-	}
-
-//  List Unstyled
-//--Usage:
-//  ul.someClass
-//      list-unstyled()
-list-unstyled()
-	display block
-	padding(0)
-	margin(0)
-	list-style none
-
-//  Image fix
-//--Usage:
-//  ul.someClass
-//      image-fix()
-image-fix()
-	max-width 100%
-	display block
-
-//  Font resize manual
-//  TODO: add usage so on
-font-resize(iterations, iterationBase, baseSize, multiplier, iterationsMinimum)
-	for i in iterations..iterationsMinimum
-		@media screen and (max-width iterationBase * i)
-			html
-				font-size round(baseSize * (multiplier * i))
+//  TODO: GLOBAL --> directional-property not to repeat property-top property-right property-bottom property-left
+//  TODO: GLOBAL --> make all usages the same with (), tip: use args[0]
+
+$mixin = 'mixin/'
+$internal = $mixin + 'internal/'
+@require $internal + 'path'
+@require $internal + 'vars'
+@require $internal + 'internal'
+
+@require $animation + 'animation'
+@require $animation + 'name'
+@require $animation +'duration'
+@require $animation + 'timing-function'
+@require $animation + 'delay'
+@require $animation + 'iteration-count'
+@require $animation + 'direction'
+@require $animation + 'fill-mode'
+@require $animation + 'play-state'
+
+@require $background + 'background'
+@require $background + 'image'
+
+@require $box + 'shadow'
+@require $box + 'sizing'
+
+@require $column + 'columns'
+@require $column + 'width'
+@require $column + 'count'
+@require $column + 'fill'
+@require $column + 'gap'
+@require $column + 'span'
+@require $column + 'rule'
+@require $column + 'rule-color'
+@require $column + 'rule-style'
+@require $column + 'rule-width'
+
+@require $flexbox + 'flexbox'
+
+@require $font + 'face'
+@require $font + 'face-local'
+@require $font + 'feature'
+@require $font + 'placeholder'
+@require $font + 'selection'
+@require $font + 'stacks'
+
+@require $gradient + 'linear'
+@require $gradient + 'radial'
+
+@require $text + 'decoration'
+@require $text + 'decoration-line'
+@require $text + 'decoration-style'
+@require $text + 'decoration-color'
+@require $text + 'ellipsis'
+@require $text + 'hide'
+@require $text + 'word-wrap'
+
+@require $transform + 'transform'
+
+@require $transition + 'transition'
+@require $transition + 'duration'
+@require $transition + 'property'
+@require $transition + 'timing-function'
+
+@require $function + 'functions'
+
+@require $border + 'border'
+@require $border + 'color'
+@require $border + 'image'
+@require $border + 'radius'
+@require $border + 'style'
+@require $border + 'width'
+
+@require $button + 'all'
+@require $button + 'all-active'
+@require $button + 'all-hover'
+@require $button + 'all-focus'
+
+@require $directional-property + 'directional-property'
+
+@require $padding + 'padding'
+@require $margin + 'margin'
+@require $position + 'position'
+
+@require $prefixer + 'prefixer'
+
+@require $retina + 'image'
+
+@require $text-input + 'text-input'
+@require $text-input + 'hover'
+@require $text-input + 'focus'
+@require $text-input + 'active'
+
+@require $timing-function + 'timing-functions'
+
+@require $misc + 'hidpi-media-query'
+@require $misc + 'hyphens'
+@require $misc + 'image-rendering'
+@require $misc + 'perspective'
+@require $misc + 'size'
+@require $misc + 'appearance'
+@require $misc + 'backface-visibility'
+@require $misc + 'calc'
+@require $misc + 'filter'
+@require $misc + 'opacity'
+@require $misc + 'user-select'
+@require $misc + 'clearfix'
+@require $misc + 'list-unstyled'
+@require $misc + 'image-fix'
+@require $misc + 'font-resize-manual'
+@require $misc + 'triangle'
