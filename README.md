@@ -1,4 +1,4 @@
-# stylus-mixin-library
+# stylus-mixin-library v0.7
 
 In your project stylus folder create stylus-mixin-library folder
 
