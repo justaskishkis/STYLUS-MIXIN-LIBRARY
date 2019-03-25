@@ -1,9 +1,5 @@
-# stylus-mixin-library v0.7
+# stylus-mixin-library v1.0
 
-In your project stylus folder create stylus-mixin-library folder
+Copy files _index.styl and folders library, utilities, validators, settings into your styles folder, connect _index.styl at the start of your main styles file or in each file you want to use it in, use it!
 
-copy core/mixin folders there and stylus-mixin-library.styl file there
-
-then in your app.styl file refference stylus-mixin-library.styl as a first refference
-
-and happy using!
+doc's are in index.html file
