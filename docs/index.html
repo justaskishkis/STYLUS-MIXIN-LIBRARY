@@ -1,0 +1,1762 @@
+<div id="main-content" class="wiki-content">
+
+    <h5 id="Mixins-Introduction:aswewritestylus(oranypreprocessor)codewewanttosavetime,makeourcodemorerobustsoweuse&quot;mixins&quot;.MixinsdocumentedbelowareacopyofmostpopularSCSSmixinlibraryhttps://www.bourbon.io/docs/5.1.0/,withsometweaksandsomefeaturesremoved.">
+        <span class="handy-header aui-icon aui-icon-small aui-iconfont-link" title="Copy link"></span>Introduction:<br>as
+        we write stylus(or any preprocessor) code we want to save time, make our code more robust so we use
+        "mixins".<br>Mixins documented below are a copy of most popular SCSS mixin library&nbsp;<a
+            href="https://www.bourbon.io/docs/5.1.0/" class="external-link" rel="nofollow">https://www.bourbon.io/docs/5.1.0/</a>,
+        with some tweaks and some features removed.</h5><h5 id="Mixins-Inalphabeticalorder:"><span
+        class="handy-header aui-icon aui-icon-small aui-iconfont-link" title="Copy link"></span>In alphabetical order:
+</h5>
+    <h1 id="Mixins-border-color()"><span class="handy-header aui-icon aui-icon-small aui-iconfont-link"
+                                         title="Copy link"></span><strong>border-color()</strong></h1>
+    <div class="table-wrap">
+        <table class="wrapped relative-table confluenceTable" style="width: 53.3736%;" resolved="">
+            <colgroup>
+                <col style="width: 53.4979%;">
+                <col style="width: 46.5021%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(204,120,50);">border-color_</span>(<span style="color: rgb(165,194,97);">red </span><span
+                            style="color: rgb(104,151,187);">#fff </span><span style="color: rgb(165,194,97);">blue yellow</span>)</pre>
+                    <p><br></p></th>
+                <th class="confluenceTh"><p>Result:</p>
+                    <pre><span style="color: rgb(186,186,186);">border-top-color</span> <span
+                            style="color: rgb(165,194,97);">red</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-right-color</span> <span
+                            style="color: rgb(104,151,187);">#fff</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-bottom-color</span> <span
+                            style="color: rgb(165,194,97);">blue</span><span style="color: rgb(204,120,50);"><br></span><span
+                            style="color: rgb(186,186,186);">border-left-color</span> <span
+                            style="color: rgb(165,194,97);">yellow</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-wrap">
+        <table class="wrapped relative-table confluenceTable" style="letter-spacing: 0.0px;width: 53.4284%;"
+               resolved="">
+            <colgroup>
+                <col style="width: 53.5457%;">
+                <col style="width: 46.4543%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(204,120,50);">border-color_</span>(<span style="color: rgb(165,194,97);">red </span><span
+                            style="color: rgb(104,151,187);">#fff </span><span
+                            style="color: rgb(165,194,97);">blue</span>)</pre>
+                    <p><br></p></th>
+                <th class="confluenceTh">Result:<br>
+                    <pre><span style="color: rgb(186,186,186);">border-top-color</span> <span
+                            style="color: rgb(165,194,97);">red</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-right-color</span> <span
+                            style="color: rgb(104,151,187);">#fff</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-bottom-color</span> <span
+                            style="color: rgb(165,194,97);">blue</span><span style="color: rgb(204,120,50);"><br></span><span
+                            style="color: rgb(186,186,186);">border-left-color</span> <span
+                            style="color: rgb(104,151,187);">#fff</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-wrap">
+        <table class="wrapped relative-table confluenceTable" style="letter-spacing: 0.0px;width: 53.593%;" resolved="">
+            <colgroup>
+                <col style="width: 53.1762%;">
+                <col style="width: 46.8238%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(204,120,50);">border-color_</span>(<span style="color: rgb(165,194,97);">red </span><span
+                            style="color: rgb(104,151,187);">#fff</span>)</pre>
+                    <p><br></p></th>
+                <th class="confluenceTh">Result:<br>
+                    <pre><span style="color: rgb(186,186,186);">border-top-color</span> <span
+                            style="color: rgb(165,194,97);">red</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-right-color</span> <span
+                            style="color: rgb(104,151,187);">#fff</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-bottom-color</span> <span
+                            style="color: rgb(165,194,97);">red</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-left-color</span> <span
+                            style="color: rgb(104,151,187);">#fff</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-wrap">
+        <table class="wrapped relative-table confluenceTable" style="letter-spacing: 0.0px;width: 53.7027%;"
+               resolved="">
+            <colgroup>
+                <col style="width: 53.0675%;">
+                <col style="width: 46.9325%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(204,120,50);">border-color_</span>(<span style="color: rgb(165,194,97);">red</span>)</pre>
+                    <p><br></p></th>
+                <th class="confluenceTh">Result:<br>
+                    <pre><span style="color: rgb(186,186,186);">border-top-color</span> <span
+                            style="color: rgb(165,194,97);">red</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-right-color</span> <span
+                            style="color: rgb(165,194,97);">red</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-bottom-color</span> <span
+                            style="color: rgb(165,194,97);">blue</span><span style="color: rgb(204,120,50);"><br></span><span
+                            style="color: rgb(186,186,186);">border-left-color</span> <span
+                            style="color: rgb(165,194,97);">red</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-wrap">
+        <table class="wrapped relative-table confluenceTable" style="letter-spacing: 0.0px;width: 53.7575%;"
+               resolved="">
+            <colgroup>
+                <col style="width: 53.0133%;">
+                <col style="width: 46.9867%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(204,120,50);">border-color_</span>(<span style="color: rgb(165,194,97);">red </span><span
+                            style="color: rgb(232,191,106);">null </span><span
+                            style="color: rgb(165,194,97);">blue </span><span
+                            style="color: rgb(232,191,106);">null</span>)</pre>
+                    <p><br></p></th>
+                <th class="confluenceTh">Result:<br>
+                    <pre><span style="color: rgb(186,186,186);">border-top-color</span> <span
+                            style="color: rgb(165,194,97);">red</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-bottom-color</span> <span
+                            style="color: rgb(165,194,97);">blue</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-wrap">
+        <table class="wrapped relative-table confluenceTable" style="letter-spacing: 0.0px;width: 53.8124%;"
+               resolved="">
+            <colgroup>
+                <col style="width: 52.8571%;">
+                <col style="width: 47.1429%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(204,120,50);">border-color_</span>(<span style="color: rgb(165,194,97);">red </span><span
+                            style="color: rgb(232,191,106);">null</span>)</pre>
+                </th>
+                <th class="confluenceTh">Result:<br>
+                    <pre><span style="color: rgb(186,186,186);">border-top-color</span> <span
+                            style="color: rgb(165,194,97);">red</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-bottom-color</span> <span
+                            style="color: rgb(165,194,97);">red</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <h1 id="Mixins-border-radius()"><span class="handy-header aui-icon aui-icon-small aui-iconfont-link"
+                                          title="Copy link"></span><strong>border-radius()</strong></h1>
+    <div class="table-wrap">
+        <table class="wrapped relative-table confluenceTable" style="width: 53.9221%;" resolved="">
+            <colgroup>
+                <col style="width: 52.6477%;">
+                <col style="width: 47.3523%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span style="color: rgb(204,120,50);">border-radius_</span>(<span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px </span><span
+                            style="color: rgb(104,151,187);">2</span><span
+                            style="color: rgb(165,194,97);">px </span><span
+                            style="color: rgb(104,151,187);">3</span><span
+                            style="color: rgb(165,194,97);">px </span><span
+                            style="color: rgb(104,151,187);">4</span><span
+                            style="color: rgb(165,194,97);">px</span>)</pre>
+                    <p><br></p></th>
+                <th class="confluenceTh"><p>Result:</p>
+                    <pre><span style="color: rgb(186,186,186);">border-top-radius</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-right-radius</span> <span
+                            style="color: rgb(104,151,187);">2</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-bottom-radius</span> <span
+                            style="color: rgb(104,151,187);">3</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-left-radius</span> <span
+                            style="color: rgb(104,151,187);">4</span><span
+                            style="color: rgb(165,194,97);">px</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-wrap">
+        <table class="wrapped relative-table confluenceTable" style="letter-spacing: 0.0px;width: 53.9221%;"
+               resolved="">
+            <colgroup>
+                <col style="width: 52.5458%;">
+                <col style="width: 47.4542%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span style="color: rgb(204,120,50);">border-radius_</span>(<span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px </span><span
+                            style="color: rgb(104,151,187);">2</span><span
+                            style="color: rgb(165,194,97);">px </span><span
+                            style="color: rgb(104,151,187);">3</span><span
+                            style="color: rgb(165,194,97);">px</span>)</pre>
+                    <p><br></p></th>
+                <th class="confluenceTh">Result:<br>
+                    <pre><span style="color: rgb(186,186,186);">border-top-radius</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-right-radius</span> <span
+                            style="color: rgb(104,151,187);">2</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-bottom-radius</span> <span
+                            style="color: rgb(104,151,187);">3</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-left-radius</span> <span
+                            style="color: rgb(104,151,187);">2</span><span
+                            style="color: rgb(165,194,97);">px</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-wrap">
+        <table class="wrapped relative-table confluenceTable" style="letter-spacing: 0.0px;width: 53.977%;" resolved="">
+            <colgroup>
+                <col style="width: 52.1872%;">
+                <col style="width: 47.8128%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span style="color: rgb(204,120,50);">border-radius_</span>(<span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px </span><span
+                            style="color: rgb(104,151,187);">2</span><span
+                            style="color: rgb(165,194,97);">px</span>)</pre>
+                    <p><br></p></th>
+                <th class="confluenceTh">Result:<br>
+                    <pre><span style="color: rgb(186,186,186);">border-top-radius</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-right-radius</span> <span
+                            style="color: rgb(104,151,187);">2</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-bottom-radius</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-left-radius</span> <span
+                            style="color: rgb(104,151,187);">2</span><span
+                            style="color: rgb(165,194,97);">px</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-wrap">
+        <table class="wrapped relative-table confluenceTable" style="letter-spacing: 0.0px;width: 53.9221%;"
+               resolved="">
+            <colgroup>
+                <col style="width: 52.1385%;">
+                <col style="width: 47.8615%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span style="color: rgb(204,120,50);">border-radius_</span>(<span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span>)</pre>
+                    <p><br></p></th>
+                <th class="confluenceTh">Result:<br>
+                    <pre><span style="color: rgb(186,186,186);">border-top-radius</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-right-radius</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-bottom-radius</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-left-radius</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-wrap">
+        <table class="wrapped relative-table confluenceTable" style="letter-spacing: 0.0px;width: 53.9221%;"
+               resolved="">
+            <colgroup>
+                <col style="width: 52.0367%;">
+                <col style="width: 47.9633%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span style="color: rgb(204,120,50);">border-radius_</span>(<span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px </span><span
+                            style="color: rgb(232,191,106);">null </span><span style="color: rgb(104,151,187);">3</span><span
+                            style="color: rgb(165,194,97);">px </span><span style="color: rgb(232,191,106);">null</span>)</pre>
+                    <p><br></p></th>
+                <th class="confluenceTh">Result:<br>
+                    <pre><span style="color: rgb(186,186,186);">border-top-radius</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-bottom-radius</span> <span
+                            style="color: rgb(104,151,187);">3</span><span
+                            style="color: rgb(165,194,97);">px</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-wrap">
+        <table class="wrapped relative-table confluenceTable" style="letter-spacing: 0.0px;width: 54.0318%;"
+               resolved="">
+            <colgroup>
+                <col style="width: 51.7276%;">
+                <col style="width: 48.2724%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span style="color: rgb(204,120,50);">border-radius_</span>(<span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px </span><span style="color: rgb(232,191,106);">null</span>)</pre>
+                </th>
+                <th class="confluenceTh">Result:<br>
+                    <pre><span style="color: rgb(186,186,186);">border-top-radius</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-bottom-radius</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <h1 id="Mixins-border-style()"><span class="handy-header aui-icon aui-icon-small aui-iconfont-link"
+                                         title="Copy link"></span><strong>border-style()</strong></h1>
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="width: 54.1964%;" resolved="">
+            <colgroup>
+                <col style="width: 51.773%;">
+                <col style="width: 48.227%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(204,120,50);">border-style_</span>(<span style="color: rgb(165,194,97);">dotted dashed solid double</span>)</pre>
+                    <p><br></p></th>
+                <th class="confluenceTh"><p>Result:</p>
+                    <pre><span style="color: rgb(186,186,186);">border-top-style</span> <span
+                            style="color: rgb(165,194,97);">dotted</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-right-style</span> <span
+                            style="color: rgb(165,194,97);">dashed</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-bottom-style</span> <span
+                            style="color: rgb(165,194,97);">solid</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-left-style</span> <span
+                            style="color: rgb(165,194,97);">double</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="letter-spacing: 0.0px;width: 54.1964%;"
+               resolved="">
+            <colgroup>
+                <col style="width: 51.5704%;">
+                <col style="width: 48.4296%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(204,120,50);">border-style_</span>(<span style="color: rgb(165,194,97);">dotted dashed solid</span>)</pre>
+                    <p><br></p></th>
+                <th class="confluenceTh"><p>Result:</p>
+                    <pre><span style="color: rgb(186,186,186);">border-top-style</span> <span
+                            style="color: rgb(165,194,97);">dotted</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-right-style</span> <span
+                            style="color: rgb(165,194,97);">dashed</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-bottom-style</span> <span
+                            style="color: rgb(165,194,97);">solid</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-left-style</span> <span
+                            style="color: rgb(165,194,97);">dashed</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="letter-spacing: 0.0px;width: 54.2512%;"
+               resolved="">
+            <colgroup>
+                <col style="width: 51.7206%;">
+                <col style="width: 48.2794%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(204,120,50);">border-style_</span>(<span style="color: rgb(165,194,97);">dotted dashed</span>)</pre>
+                    <p><br></p></th>
+                <th class="confluenceTh"><p>Result:</p>
+                    <pre><span style="color: rgb(186,186,186);">border-top-style</span> <span
+                            style="color: rgb(165,194,97);">dotted</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-right-style</span> <span
+                            style="color: rgb(165,194,97);">dashed</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-bottom-style</span> <span
+                            style="color: rgb(165,194,97);">dotted</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-left-style</span> <span
+                            style="color: rgb(165,194,97);">dashed</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="width: 54.1964%;" resolved="">
+            <colgroup>
+                <col style="width: 51.4691%;">
+                <col style="width: 48.5309%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(204,120,50);">border-style_</span>(<span style="color: rgb(165,194,97);">dotted</span>)</pre>
+                    <p><br></p></th>
+                <th class="confluenceTh"><p>Result:</p>
+                    <pre><span style="color: rgb(186,186,186);">border-top-style</span> <span
+                            style="color: rgb(165,194,97);">dotted</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-right-style</span> <span
+                            style="color: rgb(165,194,97);">dotted</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-bottom-style</span> <span
+                            style="color: rgb(165,194,97);">dotted</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-left-style</span> <span
+                            style="color: rgb(165,194,97);">dotted</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="width: 54.1964%;" resolved="">
+            <colgroup>
+                <col style="width: 51.3678%;">
+                <col style="width: 48.6322%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(204,120,50);">border-style_</span>(<span style="color: rgb(165,194,97);">dotted </span><span
+                            style="color: rgb(232,191,106);">null </span><span
+                            style="color: rgb(165,194,97);">solid </span><span
+                            style="color: rgb(232,191,106);">null</span>)</pre>
+                    <p><br></p></th>
+                <th class="confluenceTh"><p>Result:</p>
+                    <pre><span style="color: rgb(186,186,186);">border-top-style</span> <span
+                            style="color: rgb(165,194,97);">dotted</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-bottom-style</span> <span
+                            style="color: rgb(165,194,97);">solid</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="letter-spacing: 0.0px;width: 54.2512%;"
+               resolved="">
+            <colgroup>
+                <col style="width: 51.1134%;">
+                <col style="width: 48.8866%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(204,120,50);">border-style_</span>(<span style="color: rgb(165,194,97);">dotted </span><span
+                            style="color: rgb(232,191,106);">null</span>)</pre>
+                </th>
+                <th class="confluenceTh"><p>Result:</p>
+                    <pre><span style="color: rgb(186,186,186);">border-top-style</span> <span
+                            style="color: rgb(165,194,97);">dotted</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-bottom-style</span> <span
+                            style="color: rgb(165,194,97);">dotted</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <h1 id="Mixins-border-width()"><span class="handy-header aui-icon aui-icon-small aui-iconfont-link"
+                                         title="Copy link"></span><strong>border-width()</strong></h1>
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="width: 54.3061%;" resolved="">
+            <colgroup>
+                <col style="width: 50.9606%;">
+                <col style="width: 49.0394%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(204,120,50);">border-width_</span>(<span style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px </span><span
+                            style="color: rgb(104,151,187);">2</span><span
+                            style="color: rgb(165,194,97);">px </span><span
+                            style="color: rgb(104,151,187);">3</span><span
+                            style="color: rgb(165,194,97);">px </span><span
+                            style="color: rgb(104,151,187);">4</span><span
+                            style="color: rgb(165,194,97);">px</span>)</pre>
+                    <p><br></p></th>
+                <th class="confluenceTh"><p>Result:</p>
+                    <pre><span style="color: rgb(186,186,186);">border-top-width</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-right-width</span> <span
+                            style="color: rgb(104,151,187);">2</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-bottom-width</span> <span
+                            style="color: rgb(104,151,187);">3</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-left-width</span> <span
+                            style="color: rgb(104,151,187);">4</span><span
+                            style="color: rgb(165,194,97);">px</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="width: 54.4158%;" resolved="">
+            <colgroup>
+                <col style="width: 50.8577%;">
+                <col style="width: 49.1423%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(204,120,50);">border-width_</span>(<span style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px </span><span
+                            style="color: rgb(104,151,187);">2</span><span
+                            style="color: rgb(165,194,97);">px </span><span
+                            style="color: rgb(104,151,187);">3</span><span
+                            style="color: rgb(165,194,97);">px</span>)</pre>
+                    <p><br></p></th>
+                <th class="confluenceTh"><p>Result:</p>
+                    <pre><span style="color: rgb(186,186,186);">border-top-width</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-right-width</span> <span
+                            style="color: rgb(104,151,187);">2</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-bottom-width</span> <span
+                            style="color: rgb(104,151,187);">3</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-left-width</span> <span
+                            style="color: rgb(104,151,187);">2</span><span
+                            style="color: rgb(165,194,97);">px</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="letter-spacing: 0.0px;width: 54.4707%;"
+               resolved="">
+            <colgroup>
+                <col style="width: 50.8065%;">
+                <col style="width: 49.1935%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(204,120,50);">border-width_</span>(<span style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px </span><span
+                            style="color: rgb(104,151,187);">2</span><span
+                            style="color: rgb(165,194,97);">px</span>)</pre>
+                    <p><br></p></th>
+                <th class="confluenceTh"><p>Result:</p>
+                    <pre><span style="color: rgb(186,186,186);">border-top-width</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-right-width</span> <span
+                            style="color: rgb(104,151,187);">2</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-bottom-width</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-left-width</span> <span
+                            style="color: rgb(104,151,187);">2</span><span
+                            style="color: rgb(165,194,97);">px</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="width: 54.4707%;" resolved="">
+            <colgroup>
+                <col style="width: 50.9073%;">
+                <col style="width: 49.0927%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(204,120,50);">border-width_</span>(<span style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span>)</pre>
+                    <p><br></p></th>
+                <th class="confluenceTh"><p>Result:</p>
+                    <pre><span style="color: rgb(186,186,186);">border-top-width</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-right-width</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-bottom-width</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-left-width</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="width: 54.4707%;" resolved="">
+            <colgroup>
+                <col style="width: 50.9073%;">
+                <col style="width: 49.0927%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(204,120,50);">border-width_</span>(<span style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px </span><span
+                            style="color: rgb(232,191,106);">null </span><span style="color: rgb(104,151,187);">3</span><span
+                            style="color: rgb(165,194,97);">px </span><span style="color: rgb(232,191,106);">null</span>)</pre>
+                    <p><br></p></th>
+                <th class="confluenceTh"><p>Result:</p>
+                    <pre><span style="color: rgb(186,186,186);">border-top-width</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-bottom-width</span> <span
+                            style="color: rgb(104,151,187);">3</span><span
+                            style="color: rgb(165,194,97);">px</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="width: 54.4707%;" resolved="">
+            <colgroup>
+                <col style="width: 50.9073%;">
+                <col style="width: 49.0927%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(204,120,50);">border-width_</span>(<span style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px </span><span
+                            style="color: rgb(104,151,187);">2</span><span
+                            style="color: rgb(165,194,97);">px </span><span
+                            style="color: rgb(104,151,187);">3</span><span
+                            style="color: rgb(165,194,97);">px </span><span
+                            style="color: rgb(104,151,187);">4</span><span
+                            style="color: rgb(165,194,97);">px</span>)</pre>
+                    <p><br></p></th>
+                <th class="confluenceTh"><p>Result:</p>
+                    <pre><span style="color: rgb(186,186,186);">border-top-width</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-bottom-width</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <h1 id="Mixins-clear-fix()"><span class="handy-header aui-icon aui-icon-small aui-iconfont-link"
+                                      title="Copy link"></span><strong>clear-fix()</strong></h1>
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="width: 54.6352%;" resolved="">
+            <colgroup>
+                <col style="width: 50.8543%;">
+                <col style="width: 49.1457%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(204,120,50);">clear-fix_</span>()</pre>
+                    <p><br></p></th>
+                <th class="confluenceTh"><p>Result:</p>
+                    <pre><span style="color: rgb(232,191,106);">&amp;</span>::<span style="color: rgb(232,191,106);">after<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(186,186,186);">clear </span><span style="color: rgb(165,194,97);">both<br></span><span
+                            style="color: rgb(165,194,97);"> </span><span
+                            style="color: rgb(186,186,186);">content </span><span style="color: rgb(106,135,89);">""<br></span><span
+                            style="color: rgb(106,135,89);"> </span><span
+                            style="color: rgb(186,186,186);">display </span><span
+                            style="color: rgb(165,194,97);">block</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <h1 id="Mixins-ellipsis()"><span class="handy-header aui-icon aui-icon-small aui-iconfont-link"
+                                     title="Copy link"></span><strong>ellipsis()</strong></h1>
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="width: 54.6352%;" resolved="">
+            <colgroup>
+                <col style="width: 50.8543%;">
+                <col style="width: 49.1457%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(204,120,50);">ellipsis_</span>(<span
+                            style="color: rgb(104,151,187);">100</span>%<span
+                            style="color: rgb(204,120,50);">, </span><span
+                            style="color: rgb(165,194,97);">inline-block</span>)</pre>
+                    <p>NOTE:</p>
+                    <p>"100%" and "inline-block" are OPTIONAL parameters,<br> default values are 100% and inline-block
+                    </p>
+                    <p><br></p></th>
+                <th class="confluenceTh"><p>Result:</p>
+                    <pre><span style="color: rgb(186,186,186);">max-width </span><span style="color: rgb(104,151,187);">100</span>%<br><span
+                            style="color: rgb(186,186,186);">display </span><span style="color: rgb(165,194,97);">inline-block<br></span><span
+                            style="color: rgb(186,186,186);">overflow </span><span style="color: rgb(165,194,97);">hidden<br></span><span
+                            style="color: rgb(186,186,186);">text-overflow </span><span style="color: rgb(165,194,97);">ellipsis<br></span><span
+                            style="color: rgb(186,186,186);">white-space </span><span style="color: rgb(165,194,97);">nowrap<br></span><span
+                            style="color: rgb(186,186,186);">word-wrap </span><span style="color: rgb(165,194,97);">normal</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <h1 id="Mixins-font-face()"><span class="handy-header aui-icon aui-icon-small aui-iconfont-link"
+                                      title="Copy link"></span><strong>font-face()</strong></h1>
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="width: 66.8129%;" resolved="">
+            <colgroup>
+                <col style="width: 41.8586%;">
+                <col style="width: 58.1414%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre><span style="color: rgb(204,120,50);">font-face_</span>(<br> <span
+                            style="color: rgb(232,191,106);">ffPrimary</span><span style="color: rgb(204,120,50);">,<br></span><span
+                            style="color: rgb(204,120,50);"> </span><span style="color: rgb(106,135,89);">'OpenSans/Regular/' </span>+ <span
+                            style="color: rgb(232,191,106);">ffPrimary</span><span style="color: rgb(204,120,50);">,<br></span><span
+                            style="color: rgb(204,120,50);"> </span><span
+                            style="color: rgb(232,191,106);">fontLocation</span><span
+                            style="color: rgb(204,120,50);">,<br></span><span
+                            style="color: rgb(204,120,50);"> </span><span
+                            style="color: rgb(165,194,97);">normal</span><span
+                            style="color: rgb(204,120,50);">,<br></span><span
+                            style="color: rgb(204,120,50);"> </span><span
+                            style="color: rgb(165,194,97);">normal<br></span>)</pre>
+                    <p>NOTE:</p>
+                    <p>"normal" and "normal" <span>are OPTIONAL parameters,<br></span>default values are "normal" and
+                        "normal"</p>
+                    <p><br></p>
+                    <p><br></p></th>
+                <th class="confluenceTh"><p>Result:</p>
+                    <pre><span style="color: rgb(204,120,50);">@font-face</span><br> <span
+                            style="color: rgb(186,186,186);">font-family</span> <span style="color: rgb(106,135,89);">'OpenSans'</span><span
+                            style="color: rgb(204,120,50);"><br></span><span
+                            style="color: rgb(204,120,50);"> </span><span
+                            style="color: rgb(186,186,186);">src</span><br>   <span
+                            style="color: rgb(204,120,50);">url</span>(<span style="color: rgb(106,135,89);">"/assets/fonts/OpenSans/Regular/OpenSans.eot"</span>)<span
+                            style="color: rgb(204,120,50);"><br></span><span
+                            style="color: rgb(204,120,50);"> </span><span
+                            style="color: rgb(186,186,186);">src</span><br>   <span
+                            style="color: rgb(204,120,50);">url</span>(<span style="color: rgb(106,135,89);">"/assets/fonts/OpenSans/Regular/OpenSans.eot?#iefix"</span>) <span
+                            style="color: rgb(204,120,50);">format</span>(<span style="color: rgb(106,135,89);">'embedded-opentype'</span>)<span
+                            style="color: rgb(204,120,50);">,<br></span><span
+                            style="color: rgb(204,120,50);"> url</span>(<span style="color: rgb(106,135,89);">"/assets/fonts/OpenSans/Regular/OpenSans.woff"</span>) <span
+                            style="color: rgb(204,120,50);">format</span>(<span
+                            style="color: rgb(106,135,89);">'woff'</span>)<span
+                            style="color: rgb(204,120,50);">,<br> </span><span
+                            style="color: rgb(204,120,50);">url</span>(<span style="color: rgb(106,135,89);">"/assets/fonts/OpenSans/Regular/OpenSans.ttf"</span>) <span
+                            style="color: rgb(204,120,50);">format</span>(<span style="color: rgb(106,135,89);">'truetype'</span>)<span
+                            style="color: rgb(204,120,50);">,<br> </span><span
+                            style="color: rgb(204,120,50);">url</span>(<span style="color: rgb(106,135,89);">"/assets/fonts/OpenSans/Regular/OpenSans.svg#fontFileName"</span>) <span
+                            style="color: rgb(204,120,50);">format</span>(<span
+                            style="color: rgb(106,135,89);">'svg'</span>)<span
+                            style="color: rgb(204,120,50);"><br></span><span
+                            style="color: rgb(204,120,50);"> </span><span
+                            style="color: rgb(186,186,186);">font-weight</span> <span style="color: rgb(165,194,97);">normal</span><span
+                            style="color: rgb(204,120,50);"><br></span><span
+                            style="color: rgb(204,120,50);"> </span><span
+                            style="color: rgb(186,186,186);">font-style</span> <span style="color: rgb(165,194,97);">normal</span><span
+                            style="color: rgb(204,120,50);"><br></span>}</pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <h1 id="Mixins-hide-text()"><span class="handy-header aui-icon aui-icon-small aui-iconfont-link"
+                                      title="Copy link"></span><strong>hide-text()</strong></h1>
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="width: 54.6352%;" resolved="">
+            <colgroup>
+                <col style="width: 50.8543%;">
+                <col style="width: 49.1457%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(204,120,50);">hide-text_</span>()</pre>
+                    <p><br></p></th>
+                <th class="confluenceTh"><p>Result:</p>
+                    <pre><span style="color: rgb(186,186,186);">overflow </span><span style="color: rgb(165,194,97);">hidden<br></span><span
+                            style="color: rgb(186,186,186);">text-indent </span><span style="color: rgb(104,151,187);">101</span>%<br><span
+                            style="color: rgb(186,186,186);">white-space </span><span style="color: rgb(165,194,97);">nowrap</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <h1 id="Mixins-hide-visually()"><span class="handy-header aui-icon aui-icon-small aui-iconfont-link"
+                                          title="Copy link"></span><strong>hide-visually()</strong></h1>
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="width: 54.5804%;" resolved="">
+            <colgroup>
+                <col style="width: 50.9054%;">
+                <col style="width: 49.0946%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(204,120,50);"><span style="color: rgb(232,191,106);"> </span></span><span
+                            style="color: rgb(204,120,50);">hide-visually_</span>(<span style="color: rgb(165,194,97);">true</span>)<br><br><span
+                            style="color: rgb(232,191,106);"> </span><span style="color: rgb(232,191,106);">&amp;</span>:<span
+                            style="color: rgb(232,191,106);">hover<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span style="color: rgb(204,120,50);">hide-visually_</span>(<span
+                            style="color: rgb(165,194,97);">false</span>)</pre>
+                    <p><br></p></th>
+                <th class="confluenceTh"><p>Result:</p>
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(186,186,186);">border </span><span style="color: rgb(104,151,187);">0<br></span><span
+                            style="color: rgb(104,151,187);"> </span><span style="color: rgb(186,186,186);">clip </span><span
+                            style="color: rgb(204,120,50);">rect</span>(<span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);">, </span><span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);">, </span><span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);">, </span><span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span>)<br> <span style="color: rgb(186,186,186);">clip-path </span><span
+                            style="color: rgb(204,120,50);">inset</span>(<span
+                            style="color: rgb(104,151,187);">100</span>%)<br> <span
+                            style="color: rgb(204,120,50);">size</span>(<span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);">, </span><span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span>)<br> <span style="color: rgb(186,186,186);">overflow </span><span
+                            style="color: rgb(165,194,97);">hidden<br></span><span
+                            style="color: rgb(165,194,97);"> </span><span style="color: rgb(204,120,50);">padding</span>(<span
+                            style="color: rgb(104,151,187);">0 0 0 0</span>)<br> <span style="color: rgb(204,120,50);">position</span>(<span
+                            style="color: rgb(165,194,97);">absolute</span><span
+                            style="color: rgb(204,120,50);">, </span><span style="color: rgb(232,191,106);">null null null null</span>)<br> <span
+                            style="color: rgb(186,186,186);">white-space </span><span style="color: rgb(165,194,97);">nowrap<br></span><span
+                            style="color: rgb(165,194,97);"><br></span><span
+                            style="color: rgb(165,194,97);"> </span><span style="color: rgb(232,191,106);">&amp;</span>:<span
+                            style="color: rgb(232,191,106);">hover<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span style="color: rgb(186,186,186);">clip </span><span
+                            style="color: rgb(165,194,97);">auto<br></span><span
+                            style="color: rgb(165,194,97);"> </span><span
+                            style="color: rgb(186,186,186);">clip-path </span><span style="color: rgb(165,194,97);">none<br></span><span
+                            style="color: rgb(165,194,97);"> </span><span
+                            style="color: rgb(204,120,50);">size</span>(<span
+                            style="color: rgb(165,194,97);">auto</span><span
+                            style="color: rgb(204,120,50);">, </span><span
+                            style="color: rgb(165,194,97);">auto</span>)<br> <span style="color: rgb(186,186,186);">overflow </span><span
+                            style="color: rgb(165,194,97);">visible<br></span><span
+                            style="color: rgb(165,194,97);"> </span><span
+                            style="color: rgb(204,120,50);">position</span>(<span
+                            style="color: rgb(165,194,97);">static</span><span style="color: rgb(204,120,50);">, </span><span
+                            style="color: rgb(232,191,106);">null</span><span
+                            style="color: rgb(204,120,50);">, </span><span style="color: rgb(232,191,106);">null null null</span>)<br> <span
+                            style="color: rgb(186,186,186);">white-space </span><span style="color: rgb(165,194,97);">inherit</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <h1 id="Mixins-margin()"><span class="handy-header aui-icon aui-icon-small aui-iconfont-link"
+                                   title="Copy link"></span><strong>margin()</strong></h1>
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="width: 54.5804%;" resolved="">
+            <colgroup>
+                <col style="width: 50.8048%;">
+                <col style="width: 49.1952%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(204,120,50);">margin_</span>(<span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px </span><span
+                            style="color: rgb(104,151,187);">2</span><span
+                            style="color: rgb(165,194,97);">px </span><span
+                            style="color: rgb(104,151,187);">3</span><span
+                            style="color: rgb(165,194,97);">px </span><span
+                            style="color: rgb(104,151,187);">4</span><span
+                            style="color: rgb(165,194,97);">px</span>)</pre>
+                    <p><br></p></th>
+                <th class="confluenceTh"><p>Result:</p>
+                    <pre><span style="color: rgb(186,186,186);">margin-top-width</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">margin-right-width</span> <span
+                            style="color: rgb(104,151,187);">2</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">margin-bottom-width</span> <span
+                            style="color: rgb(104,151,187);">3</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">margin-left-width</span> <span
+                            style="color: rgb(104,151,187);">4</span><span
+                            style="color: rgb(165,194,97);">px</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="width: 54.5804%;" resolved="">
+            <colgroup>
+                <col style="width: 50.8048%;">
+                <col style="width: 49.1952%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(204,120,50);">margin_</span>(<span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px </span><span
+                            style="color: rgb(104,151,187);">2</span><span
+                            style="color: rgb(165,194,97);">px </span><span
+                            style="color: rgb(104,151,187);">3</span><span
+                            style="color: rgb(165,194,97);">px</span>)</pre>
+                    <p><br></p></th>
+                <th class="confluenceTh"><p>Result:</p>
+                    <pre><span style="color: rgb(186,186,186);">margin-top-width</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">margin-right-width</span> <span
+                            style="color: rgb(104,151,187);">2</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">margin-bottom-width</span> <span
+                            style="color: rgb(104,151,187);">3</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">margin-left-width</span> <span
+                            style="color: rgb(104,151,187);">2</span><span
+                            style="color: rgb(165,194,97);">px</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="width: 54.5804%;" resolved="">
+            <colgroup>
+                <col style="width: 50.8048%;">
+                <col style="width: 49.1952%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(204,120,50);">margin_</span>(<span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px </span><span
+                            style="color: rgb(104,151,187);">2</span><span
+                            style="color: rgb(165,194,97);">px</span>)</pre>
+                    <p><br></p></th>
+                <th class="confluenceTh"><p>Result:</p>
+                    <pre><span style="color: rgb(186,186,186);">margin-top-width</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">margin-right-width</span> <span
+                            style="color: rgb(104,151,187);">2</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">margin-bottom-width</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">margin-left-width</span> <span
+                            style="color: rgb(104,151,187);">2</span><span
+                            style="color: rgb(165,194,97);">px</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="width: 54.5804%;" resolved="">
+            <colgroup>
+                <col style="width: 50.8048%;">
+                <col style="width: 49.1952%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(204,120,50);">margin_</span>(<span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span>)</pre>
+                    <p><br></p></th>
+                <th class="confluenceTh"><p>Result:</p>
+                    <pre><span style="color: rgb(186,186,186);">margin-top-width</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">margin-right-width</span><span
+                            style="color: rgb(186,186,186);"> </span><span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">margin-bottom-width</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">margin-left-width</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="width: 54.5804%;" resolved="">
+            <colgroup>
+                <col style="width: 50.8048%;">
+                <col style="width: 49.1952%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(204,120,50);">margin_</span>(<span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px </span><span
+                            style="color: rgb(232,191,106);">null </span><span style="color: rgb(104,151,187);">3</span><span
+                            style="color: rgb(165,194,97);">px </span><span style="color: rgb(232,191,106);">null</span>)</pre>
+                    <p><br></p></th>
+                <th class="confluenceTh"><p>Result:</p>
+                    <pre><span style="color: rgb(186,186,186);">margin-top-width</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">margin-bottom-width</span> <span
+                            style="color: rgb(104,151,187);">3</span><span
+                            style="color: rgb(165,194,97);">px</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="width: 54.5804%;" resolved="">
+            <colgroup>
+                <col style="width: 50.8048%;">
+                <col style="width: 49.1952%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(204,120,50);">margin_</span>(<span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px </span><span style="color: rgb(232,191,106);">null</span>)</pre>
+                    <p><br></p></th>
+                <th class="confluenceTh"><p>Result:</p>
+                    <pre><span style="color: rgb(186,186,186);">margin-top-width</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">margin-bottom-width</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <h1 id="Mixins-overflow-wrap()"><span class="handy-header aui-icon aui-icon-small aui-iconfont-link"
+                                          title="Copy link"></span><strong>overflow-wrap()</strong></h1>
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="width: 54.6352%;" resolved="">
+            <colgroup>
+                <col style="width: 50.8543%;">
+                <col style="width: 49.1457%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span style="color: rgb(204,120,50);">overflow-wrap_</span>()</pre>
+                    <p><br></p></th>
+                <th class="confluenceTh"><p>Result:</p>
+                    <pre><span style="color: rgb(186,186,186);">word-wrap </span><span style="color: rgb(165,194,97);">break-word<br></span><span
+                            style="color: rgb(186,186,186);">overflow-wrap </span><span style="color: rgb(165,194,97);">break-word</span></pre>
+                    <pre><br></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <h1 id="Mixins-padding()"><span class="handy-header aui-icon aui-icon-small aui-iconfont-link"
+                                    title="Copy link"></span><strong>padding()</strong></h1>
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="width: 54.5804%;" resolved="">
+            <colgroup>
+                <col style="width: 50.8048%;">
+                <col style="width: 49.1952%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(204,120,50);">padding_</span>(<span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px </span><span
+                            style="color: rgb(104,151,187);">2</span><span
+                            style="color: rgb(165,194,97);">px </span><span
+                            style="color: rgb(104,151,187);">3</span><span
+                            style="color: rgb(165,194,97);">px </span><span
+                            style="color: rgb(104,151,187);">4</span><span
+                            style="color: rgb(165,194,97);">px</span>)</pre>
+                    <p><br></p></th>
+                <th class="confluenceTh"><p>Result:</p>
+                    <pre><span style="color: rgb(186,186,186);">padding-top-width</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">padding-right-width</span> <span
+                            style="color: rgb(104,151,187);">2</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">padding-bottom-width</span> <span
+                            style="color: rgb(104,151,187);">3</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">padding-left-width</span> <span
+                            style="color: rgb(104,151,187);">4</span><span
+                            style="color: rgb(165,194,97);">px</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="width: 54.5804%;" resolved="">
+            <colgroup>
+                <col style="width: 50.8048%;">
+                <col style="width: 49.1952%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(204,120,50);">padding_</span>(<span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px </span><span
+                            style="color: rgb(104,151,187);">2</span><span
+                            style="color: rgb(165,194,97);">px </span><span
+                            style="color: rgb(104,151,187);">3</span><span
+                            style="color: rgb(165,194,97);">px</span>)</pre>
+                    <p><br></p></th>
+                <th class="confluenceTh"><p>Result:</p>
+                    <pre><span style="color: rgb(186,186,186);">padding-top-width</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">padding-right-width</span> <span
+                            style="color: rgb(104,151,187);">2</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">padding-bottom-width</span> <span
+                            style="color: rgb(104,151,187);">3</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">padding-left-width</span> <span
+                            style="color: rgb(104,151,187);">2</span><span
+                            style="color: rgb(165,194,97);">px</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="width: 54.5804%;" resolved="">
+            <colgroup>
+                <col style="width: 50.8048%;">
+                <col style="width: 49.1952%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(204,120,50);">padding_</span>(<span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px </span><span
+                            style="color: rgb(104,151,187);">2</span><span
+                            style="color: rgb(165,194,97);">px</span>)</pre>
+                    <p><br></p></th>
+                <th class="confluenceTh"><p>Result:</p>
+                    <pre><span style="color: rgb(186,186,186);">padding-top-width</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">padding-right-width</span> <span
+                            style="color: rgb(104,151,187);">2</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">padding-bottom-width</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">padding-left-width</span> <span
+                            style="color: rgb(104,151,187);">2</span><span
+                            style="color: rgb(165,194,97);">px</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="width: 54.5804%;" resolved="">
+            <colgroup>
+                <col style="width: 50.8048%;">
+                <col style="width: 49.1952%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(204,120,50);">padding_</span>(<span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span>)</pre>
+                    <p><br></p></th>
+                <th class="confluenceTh"><p>Result:</p>
+                    <pre><span style="color: rgb(186,186,186);">padding-top-width</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">padding-right-width</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">padding-bottom-width</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">padding-left-width</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="width: 54.5804%;" resolved="">
+            <colgroup>
+                <col style="width: 50.8048%;">
+                <col style="width: 49.1952%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(204,120,50);">padding_</span>(<span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px </span><span
+                            style="color: rgb(232,191,106);">null </span><span style="color: rgb(104,151,187);">3</span><span
+                            style="color: rgb(165,194,97);">px </span><span style="color: rgb(232,191,106);">null</span>)</pre>
+                    <p><br></p></th>
+                <th class="confluenceTh"><p>Result:</p>
+                    <pre><span style="color: rgb(186,186,186);">padding-top-width</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">padding-bottom-width</span> <span
+                            style="color: rgb(104,151,187);">3</span><span
+                            style="color: rgb(165,194,97);">px</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="width: 54.5804%;" resolved="">
+            <colgroup>
+                <col style="width: 50.8048%;">
+                <col style="width: 49.1952%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(204,120,50);">padding_</span>(<span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px </span><span style="color: rgb(232,191,106);">null</span>)</pre>
+                    <p><br></p></th>
+                <th class="confluenceTh"><p>Result:</p>
+                    <pre><span style="color: rgb(186,186,186);">padding-top-width</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">padding-bottom-width</span> <span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <h1 id="Mixins-position()"><span class="handy-header aui-icon aui-icon-small aui-iconfont-link"
+                                     title="Copy link"></span><strong>position()</strong></h1>
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="width: 54.5804%;" resolved="">
+            <colgroup>
+                <col style="width: 50.8048%;">
+                <col style="width: 49.1952%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(204,120,50);">position_</span>(<span style="color: rgb(165,194,97);">relative</span><span
+                            style="color: rgb(204,120,50);">, </span><span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px </span><span
+                            style="color: rgb(104,151,187);">2</span><span
+                            style="color: rgb(165,194,97);">px </span><span
+                            style="color: rgb(104,151,187);">3</span><span
+                            style="color: rgb(165,194,97);">px </span><span
+                            style="color: rgb(104,151,187);">4</span><span
+                            style="color: rgb(165,194,97);">px</span>)</pre>
+                </th>
+                <th class="confluenceTh"><p>Result:</p>
+                    <pre><span style="color: rgb(186,186,186);">position </span><span style="color: rgb(165,194,97);">relative<br></span><span
+                            style="color: rgb(186,186,186);">top </span><span
+                            style="color: rgb(104,151,187);">1</span><span style="color: rgb(165,194,97);">px<br></span><span
+                            style="color: rgb(186,186,186);">right </span><span
+                            style="color: rgb(104,151,187);">2</span><span style="color: rgb(165,194,97);">px<br></span><span
+                            style="color: rgb(186,186,186);">bottom </span><span
+                            style="color: rgb(104,151,187);">3</span><span style="color: rgb(165,194,97);">px<br></span><span
+                            style="color: rgb(186,186,186);">left </span><span style="color: rgb(104,151,187);">4</span><span
+                            style="color: rgb(165,194,97);">px</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="width: 54.5804%;" resolved="">
+            <colgroup>
+                <col style="width: 50.8048%;">
+                <col style="width: 49.1952%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(204,120,50);">position_</span>(<span style="color: rgb(165,194,97);">absolute</span><span
+                            style="color: rgb(204,120,50);">, </span><span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px </span><span
+                            style="color: rgb(104,151,187);">2</span><span
+                            style="color: rgb(165,194,97);">px </span><span
+                            style="color: rgb(104,151,187);">3</span><span
+                            style="color: rgb(165,194,97);">px</span>)</pre>
+                    <p><br></p></th>
+                <th class="confluenceTh"><p>Result:</p>
+                    <pre><span style="color: rgb(186,186,186);">position </span><span style="color: rgb(165,194,97);">absolute<br></span><span
+                            style="color: rgb(186,186,186);">top </span><span
+                            style="color: rgb(104,151,187);">1</span><span style="color: rgb(165,194,97);">px<br></span><span
+                            style="color: rgb(186,186,186);">right </span><span
+                            style="color: rgb(104,151,187);">2</span><span style="color: rgb(165,194,97);">px<br></span><span
+                            style="color: rgb(186,186,186);">bottom </span><span
+                            style="color: rgb(104,151,187);">3</span><span style="color: rgb(165,194,97);">px<br></span><span
+                            style="color: rgb(186,186,186);">left </span><span style="color: rgb(104,151,187);">2</span><span
+                            style="color: rgb(165,194,97);">px</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="width: 54.5804%;" resolved="">
+            <colgroup>
+                <col style="width: 50.8048%;">
+                <col style="width: 49.1952%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(204,120,50);">position_</span>(<span style="color: rgb(165,194,97);">static</span><span
+                            style="color: rgb(204,120,50);">, </span><span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px </span><span
+                            style="color: rgb(104,151,187);">2</span><span
+                            style="color: rgb(165,194,97);">px</span>)</pre>
+                    <p><br></p></th>
+                <th class="confluenceTh"><p>Result:</p>
+                    <pre><span style="color: rgb(186,186,186);">position </span><span style="color: rgb(165,194,97);">static<br></span><span
+                            style="color: rgb(186,186,186);">top </span><span
+                            style="color: rgb(104,151,187);">1</span><span style="color: rgb(165,194,97);">px<br></span><span
+                            style="color: rgb(186,186,186);">right </span><span
+                            style="color: rgb(104,151,187);">2</span><span style="color: rgb(165,194,97);">px<br></span><span
+                            style="color: rgb(186,186,186);">bottom </span><span
+                            style="color: rgb(104,151,187);">1</span><span style="color: rgb(165,194,97);">px<br></span><span
+                            style="color: rgb(186,186,186);">left </span><span style="color: rgb(104,151,187);">2</span><span
+                            style="color: rgb(165,194,97);">px</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="width: 54.5804%;" resolved="">
+            <colgroup>
+                <col style="width: 50.8048%;">
+                <col style="width: 49.1952%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(204,120,50);">position_</span>(<span
+                            style="color: rgb(165,194,97);">fixed</span><span
+                            style="color: rgb(204,120,50);">, </span><span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span>)</pre>
+                    <p><br></p></th>
+                <th class="confluenceTh"><p>Result:</p>
+                    <pre><span style="color: rgb(186,186,186);">position </span><span style="color: rgb(165,194,97);">fixed<br></span><span
+                            style="color: rgb(186,186,186);">top </span><span
+                            style="color: rgb(104,151,187);">1</span><span style="color: rgb(165,194,97);">px<br></span><span
+                            style="color: rgb(186,186,186);">right </span><span
+                            style="color: rgb(104,151,187);">1</span><span style="color: rgb(165,194,97);">px<br></span><span
+                            style="color: rgb(186,186,186);">bottom </span><span
+                            style="color: rgb(104,151,187);">1</span><span style="color: rgb(165,194,97);">px<br></span><span
+                            style="color: rgb(186,186,186);">left </span><span style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="width: 54.5804%;" resolved="">
+            <colgroup>
+                <col style="width: 50.8048%;">
+                <col style="width: 49.1952%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(204,120,50);">position_</span>(<span style="color: rgb(165,194,97);">relative</span><span
+                            style="color: rgb(204,120,50);">, </span><span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px </span><span
+                            style="color: rgb(232,191,106);">null </span><span style="color: rgb(104,151,187);">3</span><span
+                            style="color: rgb(165,194,97);">px </span><span style="color: rgb(232,191,106);">null</span>)</pre>
+                    <p><br></p></th>
+                <th class="confluenceTh"><p>Result:</p>
+                    <pre><span style="color: rgb(186,186,186);">position </span><span style="color: rgb(165,194,97);">relative<br></span><span
+                            style="color: rgb(186,186,186);">top </span><span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(165,194,97);"><br></span><span
+                            style="color: rgb(186,186,186);">bottom </span><span
+                            style="color: rgb(104,151,187);">3</span><span
+                            style="color: rgb(165,194,97);">px</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="width: 54.5804%;" resolved="">
+            <colgroup>
+                <col style="width: 50.8048%;">
+                <col style="width: 49.1952%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(204,120,50);">position_</span>(<span style="color: rgb(165,194,97);">absolute</span><span
+                            style="color: rgb(204,120,50);">, </span><span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px </span><span style="color: rgb(232,191,106);">null</span>)</pre>
+                    <p><br></p></th>
+                <th class="confluenceTh"><p>Result:</p>
+                    <pre><span style="color: rgb(186,186,186);">position </span><span style="color: rgb(165,194,97);">absolute<br></span><span
+                            style="color: rgb(186,186,186);">top </span><span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(165,194,97);"><br></span><span
+                            style="color: rgb(186,186,186);">bottom </span><span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <h1 id="Mixins-prefixer()"><span class="handy-header aui-icon aui-icon-small aui-iconfont-link"
+                                     title="Copy link"></span><strong>prefixer()</strong></h1>
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="width: 54.8546%;" resolved="">
+            <colgroup>
+                <col style="width: 50.5506%;">
+                <col style="width: 49.4494%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(204,120,50);">prefixer_</span>(<span style="color: rgb(165,194,97);">opacity</span><span
+                            style="color: rgb(204,120,50);">, </span><span
+                            style="color: rgb(104,151,187);">0.2</span><span
+                            style="color: rgb(204,120,50);">, </span><span style="color: rgb(232,191,106);">o moz</span>)</pre>
+                    <p>NOTE:</p>
+                    <p>"o moz" is OPTIONAL parameter,<br>default value is "webkit moz ms o", stored in
+                        _settings.styl<br>variable "$vendorPrefixList"</p></th>
+                <th class="confluenceTh"><p>Result:</p>
+                    <pre><span style="color: rgb(186,186,186);">-o-opacity</span> <span
+                            style="color: rgb(104,151,187);">0.2</span><span style="color: rgb(204,120,50);"><br></span><span
+                            style="color: rgb(186,186,186);">-moz-opacity</span> <span style="color: rgb(104,151,187);">0.2</span><span
+                            style="color: rgb(204,120,50);"><br></span><span
+                            style="color: rgb(186,186,186);">opacity</span> <span
+                            style="color: rgb(104,151,187);">0.2</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <h1 id="Mixins-size()"><span class="handy-header aui-icon aui-icon-small aui-iconfont-link"
+                                 title="Copy link"></span><strong>size()</strong></h1>
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="width: 54.8546%;" resolved="">
+            <colgroup>
+                <col style="width: 50.5506%;">
+                <col style="width: 49.4494%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span style="color: rgb(204,120,50);">size_</span>(<span
+                            style="color: rgb(104,151,187);">1</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);">, </span><span
+                            style="color: rgb(104,151,187);">2</span><span
+                            style="color: rgb(165,194,97);">px</span>)</pre>
+                    <p>NOTE:</p>
+                    <p>both values must be entered, if you just need 1 parameter, enter simply:<br>width 1px<br>OR<br>height
+                        2px</p></th>
+                <th class="confluenceTh"><p>Result:</p>
+                    <pre><span style="color: rgb(186,186,186);">width </span><span
+                            style="color: rgb(104,151,187);">1</span><span style="color: rgb(165,194,97);">px<br></span><span
+                            style="color: rgb(186,186,186);">height </span><span
+                            style="color: rgb(104,151,187);">2</span><span
+                            style="color: rgb(165,194,97);">px</span></pre>
+                    <pre><br></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <h1 id="Mixins-triangle()"><span class="handy-header aui-icon aui-icon-small aui-iconfont-link"
+                                     title="Copy link"></span><strong>triangle()</strong></h1>
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="width: 54.8546%;" resolved="">
+            <colgroup>
+                <col style="width: 50.5506%;">
+                <col style="width: 49.4494%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span
+                            style="color: rgb(204,120,50);">triangle_</span>(<span
+                            style="color: rgb(106,135,89);">'up'</span><span
+                            style="color: rgb(204,120,50);">, </span><span
+                            style="color: rgb(104,151,187);">20</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);">, </span><span
+                            style="color: rgb(104,151,187);">10</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);">, </span><span
+                            style="color: rgb(165,194,97);">red</span>)</pre>
+                    <p>NOTE:</p>
+                    <p>all possible options for direction are:<br>'up', 'up-right', 'right', 'down-right', 'down',
+                        'down-left', 'left', 'up-left'</p></th>
+                <th class="confluenceTh"><p>Result:</p>
+                    <pre><span style="color: rgb(186,186,186);">display</span> <span style="color: rgb(165,194,97);">block</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-top-style</span> <span
+                            style="color: rgb(165,194,97);">solid</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-right-style</span> <span
+                            style="color: rgb(165,194,97);">solid</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-bottom-style</span> <span
+                            style="color: rgb(165,194,97);">solid</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-left-style</span> <span
+                            style="color: rgb(165,194,97);">solid</span><span
+                            style="color: rgb(204,120,50);"><br></span><span
+                            style="color: rgb(186,186,186);">width</span> <span
+                            style="color: rgb(104,151,187);">0</span><span
+                            style="color: rgb(204,120,50);"><br></span><span
+                            style="color: rgb(186,186,186);">height</span> <span
+                            style="color: rgb(104,151,187);">0</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-top-color</span> <span
+                            style="color: rgb(165,194,97);">transparent</span><span style="color: rgb(204,120,50);"><br></span><span
+                            style="color: rgb(186,186,186);">border-right-color</span> <span
+                            style="color: rgb(165,194,97);">transparent</span><span style="color: rgb(204,120,50);"><br></span><span
+                            style="color: rgb(186,186,186);">border-bottom-color</span> <span
+                            style="color: rgb(104,151,187);">#f00</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-left-color</span> <span
+                            style="color: rgb(165,194,97);">transparent</span><span style="color: rgb(204,120,50);"><br></span><span
+                            style="color: rgb(186,186,186);">border-top-width</span> <span
+                            style="color: rgb(104,151,187);">0</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-right-width</span> <span
+                            style="color: rgb(104,151,187);">10</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-bottom-width</span> <span
+                            style="color: rgb(104,151,187);">10</span><span
+                            style="color: rgb(165,194,97);">px</span><span
+                            style="color: rgb(204,120,50);"><br></span><span style="color: rgb(186,186,186);">border-left-width</span> <span
+                            style="color: rgb(104,151,187);">10</span><span
+                            style="color: rgb(165,194,97);">px</span></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <h1 id="Mixins-value-prefixer()"><span class="handy-header aui-icon aui-icon-small aui-iconfont-link"
+                                           title="Copy link"></span><strong>value-prefixer()</strong></h1>
+    <div class="table-wrap">
+        <table class="relative-table wrapped confluenceTable" style="width: 54.8546%;" resolved="">
+            <colgroup>
+                <col style="width: 50.5506%;">
+                <col style="width: 49.4494%;">
+            </colgroup>
+            <tbody>
+            <tr>
+                <th class="confluenceTh">
+                    <pre>.<span style="color: rgb(232,191,106);">some-class<br></span><span
+                            style="color: rgb(232,191,106);"> </span><span style="color: rgb(204,120,50);">value-prefixer_</span>(<span
+                            style="color: rgb(232,191,106);">cursor</span><span
+                            style="color: rgb(204,120,50);">, </span><span
+                            style="color: rgb(165,194,97);">grab</span><span
+                            style="color: rgb(204,120,50);">, </span><span style="color: rgb(232,191,106);">o moz</span>)</pre>
+                    <p>NOTE:</p>
+                    <p>"o moz" is OPTIONAL parameter,<br>default value is "webkit moz ms o", stored in
+                        _settings.styl<br>variable "$vendorPrefixList"</p></th>
+                <th class="confluenceTh"><p>Result:</p>
+                    <pre><span style="color: rgb(186,186,186);">cursor </span><span style="color: rgb(232,191,106);">-o-grab<br></span><span
+                            style="color: rgb(186,186,186);">cursor </span><span style="color: rgb(165,194,97);">-moz-grab<br></span><span
+                            style="color: rgb(186,186,186);">cursor </span><span
+                            style="color: rgb(165,194,97);">grab</span></pre>
+                    <pre><br></pre>
+                    <pre><br></pre>
+                </th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+</div>
